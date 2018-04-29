@@ -827,7 +827,7 @@ int main(void)
 
 	// system("mkdir -m 777 src");
 	// open socket unix or TCP
-	string socket = "127.0.0.1:" + Config::getInstance().getPort();
+	string socket = "0.0.0.0:" + Config::getInstance().getPort();
 	socketId = FCGX_OpenSocket(socket.c_str(), 2000);
 	if (socketId < 0) {
 		ERROR(string("Cannot open socket	" + socket));
